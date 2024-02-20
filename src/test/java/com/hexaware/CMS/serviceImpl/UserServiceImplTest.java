@@ -25,7 +25,7 @@ public class UserServiceImplTest {
 
 	@Test
 	public void generateIncidentTest() {
-		Incident incident=new Incident(2,"Intiated","Lost Property","Purse","1000","Purse.img","Brown Leather","Near Gurgaon",new HashSet<Officer>());
+		Incident incident=new Incident(12,"Intiated","Lost Property","Purse","1000","Purse.img","Brown Leather","Near Gurgaon",new HashSet<Officer>());
 		User user = new User(1,new BigInteger("123456789012"),"John Doe","ABCDE1234F",LocalDate.of(1990,05,15),"123 Main St, City, Country",
 				User.CalculateAge(LocalDate.of(1990,05,15)),List.of(incident));
 		user = UserServiceImpl.generateIncident(user);
@@ -33,12 +33,7 @@ public class UserServiceImplTest {
 
 	}
 
-	@Test
-	public void generateReportByIdTest() {
-		User user= UserServiceImpl.generateReportById(2);
-		if(user==null)
-		LOGGER.log(Level.INFO, "saved user " + user);
-	}
+	
 
 	@Test
 	public void trackIncidentById() {

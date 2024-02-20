@@ -117,7 +117,7 @@ public class Officer {
 		@Override
 		public String toString() {
 			return "Officer [id=" + id + ", name=" + name + ", badgeNumber=" + badgeNumber + ", rank=" + rank
-					+ ", incidentList=" + incidentList + "]";
+					+ ", incidentList="  /*+ incidentList*/ + "]";
 		}
 	    
 	    
